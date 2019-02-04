@@ -1,0 +1,403 @@
+aside {
+    width: 100%;
+    max-width: 250px;
+    float: left; 
+    background: #3e4950;
+    height: 1120px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    > section  {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box; 
+        padding: 0 25px;
+    }
+    .sec-title {
+        font-size: 13px;
+        font-weight: bold;
+        position: relative;
+        text-transform: uppercase; 
+        margin-left: 31px;
+        margin-bottom: 12px;
+        &:before { 
+            content: "";
+            position: absolute;
+            left: -31px;
+            top: -5px;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background: #2d343a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+        }
+        &.sobre-mim:before {
+            content: "\f007";
+        }
+        &.contato:before {
+            content: "\f2b9";
+            font-size: 10px;
+        }
+        &.habilidades:before {
+            content: "\f0e7";
+            font-size: 10px;
+        }
+    }
+    .text {
+        font-size: 13px;
+        line-height: 15px;
+        margin-bottom: 12px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    .list {
+        list-style-type: none;
+        padding-left: 29px;
+        &.top-50 {
+            margin-top: 18px;
+        }
+        .item {
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 10px;
+            position: relative;
+            &.bottom-50 {
+                margin-bottom: 34px;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                left: -26px;
+                top: 0;
+                font-size: 10px;
+                bottom: 0;
+                margin: auto;
+                height: 14px;
+                width: 14px;
+                border-radius: 50%;
+                background: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: inherit;
+                color: #2d343a;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            &.endereco:before {
+                content: "\f041";
+            }
+            &.web:before {
+                content: "\f0ac";
+            }
+            &.phone:before {
+                content: "\f095";
+            }
+            &.js:before {
+                background-image: url('/images/icons/javascript.png');
+                background-size: 8px;
+            }
+            &.css:before {
+                background-image: url('/images/icons/css.png');
+                background-size: 8px;
+            }
+            &.banco-dados:before {
+                content: "\f1c0";
+            }
+            &.php:before {
+                background-image: url('/images/icons/php.png');
+                background-size: 10px;
+            }
+            &.react:before {
+                background-image: url('/images/icons/react.png');
+                background-size: 10px;
+            }
+            &.nodejs:before {
+                background-image: url('/images/icons/nodejs.png');
+                background-size: 8px;
+            }
+            .link {
+                color: white;
+            }
+            .nivel {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background-color: white;
+                height: 7px;
+                border-radius: 50px;
+                bottom: -14px;
+                overflow: hidden;
+                .progress-bar {
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    top: 0px;
+                    bottom: 0px;
+                    background: #2d343a;
+
+                    $class-slug: size !default;
+
+                    @for $i from 1 through 19 { 
+                        &.#{$class-slug}-#{$i*5} {
+                            right: 137px - $i*7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .eu {
+        width: 100%;
+        background: #2d343a; 
+        display: flex;
+        flex-direction: column;  
+        height: 300px;
+        padding: 0;
+        .foto {
+            height: 170px;
+            border-radius: 50%;
+            width: 170px;
+            box-shadow: 0 0 0 3px #3e4950;
+            margin: 31px auto 34px;
+            background-image: url('/images/alexandre-gomes-medio.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-position-x: -16px;
+        }
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 17px;
+            > span {
+                text-transform: capitalize;
+                font-size: 11px;
+            }
+        }
+    }
+    .sobre-mim {
+        margin-top: 33px;
+    }
+
+    .contato, .habilidades {
+        margin-top: 55px;
+    }
+}
+main {
+    width: 100%;
+    max-width: 460px;
+    float: left; 
+    margin-left: 40px;
+    margin-top: 60px;
+    padding-right: 20px;
+    font-family: 'Roboto Slab', serif;
+    .experiencia-profissional {
+        color: #2d343a;
+        .sec-title {
+            text-transform: uppercase;
+        }
+        h2.sec-title {
+            font-size: 21px;
+            font-weight: bold;
+            position: relative;
+            padding-left: 51px;
+            &:before {
+                content: "";
+                background-image: url('/images/icons/icon-mala-white.png');
+                background-size: 15px;
+                background-position: center 9px;
+                background-repeat: no-repeat;
+                position: absolute;
+                background-color: #2d343a;
+                height: 34px;
+                width: 34px;
+                border-radius: 50%;
+                top: -5px;
+                left: 0;
+            }
+        }
+        h3.sec-title {
+            font-size: 21px;
+            width: 100%;
+        }
+        .sub-sec {
+            margin-top: 29px;
+            padding-left: 51px;
+            .sub-sec-header {
+                display: flex;
+                flex-wrap: wrap;
+                > a {
+                    float: left;
+                    font-size: 13px;
+                    display: block;
+                    color: #94a2ac;
+                    position: relative;
+                    margin-left: 27px;
+                    margin-top: 9px;
+                    &:last-child {
+                        margin-left: 60px;
+                    }
+                    &:before {
+                        content: "";
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        height: 15px;
+                        width: 21px;
+                        position: absolute;
+                        left: -27px;
+                        top: -3px;
+                    }
+                    &.empresa:before {
+                        background-image: url('/images/icons/icon-empresa-light-blue.png');
+                    }
+                    &.tempo:before {
+                        background-image: url('/images/icons/icon-calendario-light-blue.png')
+                    }
+                }
+            }
+            > p {
+                margin-top: 13px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .educacao {
+        margin-top: 44px;
+        color: #2d343a;
+        .sec-title {
+            text-transform: uppercase;
+        }
+        h2.sec-title {
+            font-size: 21px;
+            font-weight: bold;
+            position: relative;
+            padding-left: 51px;
+            &:before {
+                content: "";
+                background-image: url('/images/icons/ico-estudo-hea-white.png');
+                background-size: 23px;
+                background-position: center 10px;
+                background-repeat: no-repeat;
+                position: absolute;
+                background-color: #2d343a;
+                height: 34px;
+                width: 34px;
+                border-radius: 50%;
+                top: -5px;
+                left: 0;
+            }
+        }
+        h3.sec-title {
+            font-size: 21px;
+            width: 100%;
+        }
+        .sub-sec {
+            margin-top: 29px;
+            padding-left: 51px;
+            .sub-sec-header {
+                display: flex;
+                flex-wrap: wrap;
+                > a {
+                    float: left;
+                    font-size: 13px;
+                    display: block;
+                    color: #94a2ac;
+                    position: relative;
+                    margin-left: 27px;
+                    margin-top: 9px;
+                    &:last-child {
+                        margin-left: 45px;
+                    }
+                    &:before {
+                        content: "";
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        height: 15px;
+                        width: 21px;
+                        position: absolute;
+                        left: -27px;
+                        top: -3px;
+                    }
+                    &.estudo:before {
+                        background-image: url('/images/icons/icon-estudo-light-blue.png');
+                    }
+                    &.tempo:before {
+                        background-image: url('/images/icons/icon-calendario-light-blue.png')
+                    }
+                }
+            }
+            > p {
+                margin-top: 13px;
+                font-size: 13px;
+            }
+        }
+    }
+    .linguas {
+        margin-top: 44px;
+        color: #2d343a;
+        .sec-title {
+            text-transform: uppercase;
+        }
+        h2.sec-title {
+            font-size: 21px;
+            font-weight: bold;
+            position: relative;
+            padding-left: 51px;
+            &:before {
+                content: "";
+                background-image: url('/images/icons/icon-linguas-white.png');
+                background-size: 20px;
+                background-position: center 7px;
+                background-repeat: no-repeat;
+                position: absolute;
+                background-color: #2d343a;
+                height: 34px;
+                width: 34px;
+                border-radius: 50%;
+                top: -5px;
+                left: 0;
+            }
+        }
+        h3.sec-title {
+            font-size: 21px;
+            width: 100%;
+        }
+        .sub-sec {
+            margin-top: 29px;
+            padding-left: 51px;
+            width: 100px;
+            text-align: center;
+            .bandeira {
+                height: 92px;
+                background-image: url('/images/bandeira-eua.jpg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                text-align: center;
+            }
+            .lingua {
+                display: block;
+                margin-bottom: 3px;
+            }
+        }
+    }
+}

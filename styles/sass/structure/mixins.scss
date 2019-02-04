@@ -1,0 +1,35 @@
+@mixin paddingFix() {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+}
+
+@mixin transition($t) {
+    -webkit-transition: $t all ease;
+    -moz-transition: $t all ease;
+    -o-transition: $t all ease;
+    transition: $t all ease;
+}
+
+@mixin visual-hide () {
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute!important;
+    border: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+    clip: rect(1px,1px,1px,1px);
+}
+
+@mixin hide-select () {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
