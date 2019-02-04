@@ -1,6 +1,5 @@
 //base
 @import "./structure/mixins";
-@import "./structure/variables";
 @import "./structure/reset";
 @import "./structure/structure";  
 
@@ -8,9 +7,5 @@
 @import "./frameworks/fontawesome/fontawesome.scss";
 
 //content
-@import "./content/header";
 @import "./content/pages/index"; 
- 
-@import "./content/footer";
 
-//components
