@@ -174,7 +174,7 @@ aside {
             width: 170px;
             box-shadow: 0 0 0 3px #3e4950;
             margin: 31px auto 34px;
-            background-image: url('/images/alexandre-gomes-medio.jpg');
+            background-image: url('/images/alexandre-gomes-pequeno.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -397,6 +397,16 @@ main {
             .lingua {
                 display: block;
                 margin-bottom: 3px;
+            }
+        }
+    }
+}
+
+@media print {
+    aside {
+        .eu {
+            .foto {
+                background-image: url('/images/alexandre-gomes-medio.jpg');
             }
         }
     }
